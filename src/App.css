@@ -47,3 +47,10 @@
   text-align: left;
   padding-left: 10px;
 }
+
+.ListView h3 {
+  border-bottom: 2px solid rgba(240,240,240,0.8);
+}
+.DetailView h3 {
+  border-bottom: 2px solid #005b82;
+}
