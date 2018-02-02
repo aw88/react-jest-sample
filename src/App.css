@@ -26,3 +26,24 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.ListView {
+  background: #005b82;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right: 10px;
+  text-align: right;
+  padding-right:20px;
+  color: white;
+}
+  .ListView div {
+    cursor: pointer;
+  }
+
+.DetailView {
+  background: rgba(240,240,240,0.9);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: left;
+  padding-left: 10px;
+}
