@@ -1,0 +1,21 @@
+.MasterDetailFlow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.MasterDetailFlow h2 {
+  width: 100%;
+}
+
+.MasterDetailFlow .ListView {
+  width: 300px;
+}
+
+.MasterDetailFlow .DetailView {
+  flex: 1;
+  text-align: start;
+}
+
+.MasterDetailFlow .DebugInfo {
+  width: 100%;
+}
