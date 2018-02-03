@@ -1,36 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class DetailView extends Component {
-  render() {
-    return (
-      <div className="DetailView">
-        <h3>Detail View</h3>
+const DetailView = ({ definition }) => (
+  <div className="DetailView">
+    <h3>Detail View</h3>
 
-        { this.props.definition ? (
-          <div className="DefinitionDetail">
-            <h4>{this.props.definition.title}</h4>
-            <strong>Includes terms:</strong>
-            <ul>
-              { Array.from(this.props.definition.includedTerms).map(t =>
-                <li className="IncludedTerm" key={t}>{t}</li>) }
-            </ul>
+    { definition ? (
+      <div className="DefinitionDetail">
+        <h4>{definition.title}</h4>
+        <h5>Includes terms:</h5>
+        <ul className="TermList IncludedTerms">
+          { Array.from(definition.includedTerms).map(t =>
+            <li className="IncludedTerm" key={t}>{t}</li>) }
+        </ul>
 
-            <strong>Excludes terms:</strong>
-            <ul>
-              { Array.from(this.props.definition.excludedTerms).map(t =>
-                <li className="ExcludedTerm" key={t}>{t}</li>) }
-            </ul>
-          </div>
-        ) : (
-          <div className="DefinitionDetailEmpty">
-            <h4>Select a definition</h4>
-          </div>
-        ) }
+        <h5>Excludes terms:</h5>
+        <ul className="TermList ExcludedTerms">
+          { Array.from(definition.excludedTerms).map(t =>
+            <li className="ExcludedTerm" key={t}>{t}</li>) }
+        </ul>
       </div>
-    );
-  }
-}
+    ) : (
+      <div className="DefinitionDetailEmpty">
+        <h4>Select a definition</h4>
+      </div>
+    ) }
+  </div>
+);
 
 DetailView.propTypes = {
   definition: PropTypes.shape({
