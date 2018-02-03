@@ -1,0 +1,11 @@
+.DetailView {
+  background: rgba(240,240,240,0.9);
+  border-top-left-radius: var(--bg-border-radius);
+  border-bottom-left-radius: var(--bg-border-radius);
+  text-align: left;
+  padding-left: 10px;
+}
+
+.DetailView h3 {
+  border-bottom: 2px solid #005b82;
+}

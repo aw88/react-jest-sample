@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import './DetailView.css';
+
 const DetailView = ({ definition }) => (
   <div className="DetailView">
     <h3>Detail View</h3>

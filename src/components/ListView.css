@@ -1,0 +1,17 @@
+.ListView {
+  background: #005b82;
+  border-top-right-radius: var(--bg-border-radius);
+  border-bottom-right-radius: var(--bg-border-radius);
+  margin-right: 10px;
+  text-align: right;
+  padding-right:20px;
+  color: white;
+}
+
+.ListView h3 {
+  border-bottom: 2px solid rgba(240,240,240,0.8);
+}
+
+.ListView div {
+  cursor: pointer;
+}

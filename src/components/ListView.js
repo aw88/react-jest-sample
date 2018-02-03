@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import './ListView.css';
+
 const ListViewItem = ({ definition, onItemClicked }) => (
   <div className="ListViewItem">
     <h4 onClick={onItemClicked}>
