@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './ListView.css';
 
-const ListViewItem = ({ definition, onItemClicked }) => (
+export const ListViewItem = ({ definition, onItemClicked }) => (
   <div className="ListViewItem">
     <h4 onClick={onItemClicked}>
       {definition.title}
@@ -11,7 +11,7 @@ const ListViewItem = ({ definition, onItemClicked }) => (
   </div>
 );
 
-const ListView = ({ definitions, onSelect }) => (
+export const ListView = ({ definitions, onSelect }) => (
   <div className="ListView">
     <h3>List View</h3>
     {definitions.map(d =>
@@ -29,6 +29,11 @@ ListView.propTypes = {
       title: PropTypes.string
     })
   )
+};
+
+ListView.defaultProps = {
+  definitions: [],
+  onSelect: () => {}
 };
 
 export default ListView;
