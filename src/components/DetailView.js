@@ -35,8 +35,8 @@ class DetailView extends Component {
 DetailView.propTypes = {
   definition: PropTypes.shape({
     title: PropTypes.string,
-    includedTerms: PropTypes.arrayOf(PropTypes.string),
-    excludedTerms: PropTypes.arrayOf(PropTypes.string)
+    includedTerms: PropTypes.object,
+    excludedTerms: PropTypes.object
   }),
 };
 

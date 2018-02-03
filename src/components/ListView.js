@@ -32,9 +32,7 @@ ListView.propTypes = {
   onSelect: PropTypes.func,
   definitions: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string,
-      includedTerms: PropTypes.arrayOf(PropTypes.string),
-      excludedTerms: PropTypes.arrayOf(PropTypes.string)
+      title: PropTypes.string
     })
   )
 };
