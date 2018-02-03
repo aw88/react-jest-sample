@@ -12,6 +12,24 @@
   border-bottom: 2px solid rgba(240,240,240,0.8);
 }
 
-.ListView div {
-  cursor: pointer;
+.ListViewItem button {
+  color: #fff;
+  display: inline-block;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  background: transparent;
+  border: none;
+}
+
+.ListViewItem.Selected button {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ListViewItem button:focus {
+  outline-color: rgba(255, 255, 255, 0.3);
+}
+
+.ListViewItem button:active {
+  background: rgba(255, 255, 255, 0.2);
+  outline-color: rgba(255, 255, 255, 0.2);
 }

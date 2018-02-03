@@ -38,7 +38,7 @@ class MasterDetailFlow extends Component {
       <div className="MasterDetailFlow">
         <h2>Master Detail Flow</h2>
         
-        <ListView definitions={definitions} onSelect={this.onListItemSelected} />
+        <ListView definitions={definitions} onSelect={this.onListItemSelected} selectedDefinition={this.state.selectedDefinition} />
         <DetailView definition={this.state.selectedDefinition} />
         
         <div className="DebugInfo">
