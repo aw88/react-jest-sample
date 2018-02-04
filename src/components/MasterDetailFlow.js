@@ -6,10 +6,10 @@ import { TermDefinition } from '../models/Definition';
 import './MasterDetailFlow.css';
 
 const definitions = [
-  new TermDefinition('First definition', ['term1', 'term2'], ['term3']),
-  new TermDefinition('Second definition', ['term2'], []),
-  new TermDefinition('Third definition', ['term3'], ['term2']),
-  new TermDefinition('Fourth definition', ['term1', 'term2', 'term4'], ['term3', 'term5']),
+  new TermDefinition(1, 'First definition', ['term1', 'term2'], ['term3']),
+  new TermDefinition(2, 'Second definition', ['term2'], []),
+  new TermDefinition(3, 'Third definition', ['term3'], ['term2']),
+  new TermDefinition(4, 'Fourth definition', ['term1', 'term2', 'term4'], ['term3', 'term5']),
 ];
 
 class MasterDetailFlow extends Component {

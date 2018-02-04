@@ -28,7 +28,7 @@ export const ListView = ({ definitions, onSelect, selectedDefinition }) => (
     <h3>List View</h3>
     {definitions.map(d =>
       <ListViewItem
-        key={d.title}
+        key={d.id}
         definition={d}
         onItemClicked={() => onSelect(d)}
         selected={d === selectedDefinition} />)}

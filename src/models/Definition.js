@@ -7,7 +7,8 @@ function setFromIterable(obj) {
 }
 
 export class TermDefinition {
-  constructor(title, includedTerms, excludedTerms) {
+  constructor(id, title, includedTerms, excludedTerms) {
+    this.id = id;
     this.title = title;
     this.includedTerms = setFromIterable(includedTerms);
     this.excludedTerms = setFromIterable(excludedTerms);
