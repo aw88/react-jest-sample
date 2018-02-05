@@ -34,7 +34,7 @@ it('should open the clicked definition\'s details', () => {
   expect(masterDetail.find(DetailView).prop('definition')).toBeNull();
   
   // Click on the first item in the list
-  masterDetail.find(ListView).find('h4').first().simulate('click');
+  masterDetail.find(ListView).find('button').first().simulate('click');
 
   // Re-render <MasterDetailFlow /> with updated state
   masterDetail.update();

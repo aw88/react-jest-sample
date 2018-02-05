@@ -34,7 +34,7 @@ describe('<ListView />', () => {
 
     const listView = mount(<ListView definitions={definitions} onSelect={onSelectMock} />);
 
-    listView.find('h4').first().simulate('click');
+    listView.find('button').first().simulate('click');
 
     expect(onSelectMock.mock.calls.length).toBe(1);
     expect(onSelectMock.mock.calls[0][0]).toBe(definitions[0]);
