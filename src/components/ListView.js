@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import './ListView.css';
@@ -15,6 +15,14 @@ export const ListViewItem = ({ definition, onItemClicked, selected }) => {
   );
 }
 
+ListViewItem.propTypes = {
+  definition: PropTypes.shape({
+    title: PropTypes.string
+  }),
+  onItemClicked: PropTypes.func,
+  selected: PropTypes.bool
+}
+
 export const ListView = ({ definitions, onSelect, selectedDefinition }) => (
   <div className="ListView">
     <h3>List View</h3>
@@ -23,7 +31,7 @@ export const ListView = ({ definitions, onSelect, selectedDefinition }) => (
         key={d.title}
         definition={d}
         onItemClicked={() => onSelect(d)}
-        selected={d == selectedDefinition} />)}
+        selected={d === selectedDefinition} />)}
   </div>
 );
 
@@ -33,7 +41,8 @@ ListView.propTypes = {
     PropTypes.shape({
       title: PropTypes.string
     })
-  )
+  ),
+  selectedDefinition: PropTypes.object
 };
 
 ListView.defaultProps = {
