@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import AddDefinition from './AddDefinition';
+
+import { connect } from 'react-redux';
 
 import './ListView.css';
 
@@ -32,6 +35,7 @@ export const ListView = ({ definitions, onSelect, selectedDefinition }) => (
         definition={d}
         onItemClicked={() => onSelect(d)}
         selected={d === selectedDefinition} />)}
+    <AddDefinition />
   </div>
 );
 
@@ -50,4 +54,10 @@ ListView.defaultProps = {
   onSelect: () => {}
 };
 
-export default ListView;
+const mapStateToProps = state => {
+  return {
+    definitions: state,
+  };
+}
+
+export default connect(mapStateToProps)(ListView);
